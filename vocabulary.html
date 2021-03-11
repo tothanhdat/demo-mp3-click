@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .icon img{
+        margin-left: 50px;
+        height: 100px;
+        width: 100px;
+    }
+    .icon p{
+        margin-left: 50px;
+    }
+
+</style>
+<body>
+    <h1>Demo play mp3 when lick image</h1>
+    <div class="main">
+        <div class="icon">
+            <audio class="vocabulary">
+                <source src="buffalo.mp3" type="audio/mpeg">
+            </audio>
+            <img src="./cape-buffalo-2.jpg" alt="buffalo">
+            <p>Buffalo</p>
+            <p>bəf(ə)ˌlō</p>
+            <p>Con trâu</p>
+        </div>
+        <div class="icon">
+            <audio class="vocabulary">
+                <source src="chicken.mp3" type="audio/mpeg">
+            </audio>
+            <img src="./chicken.jpg" alt="chicken">
+            <p>Chicken</p>
+            <p>chi·kn</p>
+            <p>Con gà</p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+<script>
+    $(".icon").click(function() {
+        $(this).find(".vocabulary")[0].play();
+    });
+</script>
